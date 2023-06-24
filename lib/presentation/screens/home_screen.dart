@@ -3,7 +3,6 @@ import 'dart:math' as math;
 
 import '../widgets/card/widgets.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -44,11 +43,12 @@ class _HomeScreenState extends State<HomeScreen> {
             }
           });
         },
-        child: const Icon(Icons.rotate_left),
+        child: const AnimatedRotation(
+          turns: 4,
+          duration: Duration(milliseconds: 1000),
+          child: Icon(Icons.rotate_left),
+        ),
       ),
     );
   }
 }
-
-
-

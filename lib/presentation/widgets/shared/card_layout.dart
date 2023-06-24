@@ -33,9 +33,17 @@ class _CardLayoutState extends State<CardLayout> {
             height: 200,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 3,
+                  spreadRadius: 1,
+                  offset: const Offset(0, 2),
+                  color: Colors.grey[400]!,
+                ),
+              ],
               gradient: LinearGradient(
                 begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
+                end: Alignment.bottomRight,
                 colors: [
                   Colors.blue.withOpacity(0.9),
                   Colors.purple.withOpacity(0.9),
